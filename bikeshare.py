@@ -1,6 +1,5 @@
 import time
 import pandas as pd
-import numpy as np
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -17,7 +16,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    
+
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
     dow = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday','all']
     while True:
@@ -164,9 +163,9 @@ def user_stats(df):
 
     # TO DO: Display counts of user types
     print('Counts of users:\n' + str(df['User Type'].value_counts()))
-    
+
     if city in ['chicago', 'new york city']:
-        
+
         # TO DO: Display counts of gender
         print('Counts of gender:\n' + str(df['Gender'].value_counts()))
 
@@ -177,12 +176,12 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
 def show_data(df):
     i=0
     print(df.iloc[i:i+5])
     while True:
-        try: 
+        try:
             x=input('Do you want to see the next 5 rows? (yes, no):')
             if x =='yes':
                 i+=5
@@ -212,11 +211,11 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         show_data(df)
-        
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
 
 if __name__ == "__main__":
-	main()
+    main()
