@@ -11,5 +11,6 @@ In this project, we will make use of Python to explore data related to bike shar
 Include the files used
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Udacity Nanodegree Programming for Data Science - Python 
+
 
